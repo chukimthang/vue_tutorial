@@ -1,14 +1,20 @@
 new Vue({
   el: "#vue-app",
   data: {
-    name: "Chu Kim Thang",
-    job: "Information Technology",
-    website: "https://sochitieu.herokuapp.com",
-    websiteTag: "<a href='https://www.youtube.com'>Link youtube</a>"
+    age: 24,
+    x: 0,
+    y: 0
   },
   methods: {
-    greet:function(time) {
-      return "Good " + time + " " + this.name;
+    add:function(number) {
+      return this.age += number;
+    },
+    subtract:function(number) {
+      return this.age -= number;
+    },
+    updateXY:function(event) { 
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     }
   }
 });
