@@ -9,17 +9,14 @@
 </head>
 <body>
   <div id="vue-app">
-    <h1>Computed Properties</h1>
+    <h1>Conditionals</h1>
     
-    <button v-on:click="a++">Add to A</button>
-    <button v-on:click="b++">Add to B</button>
-
-    <p>A = {{ a }}</p>
-    <p>B = {{ b }}</p>
-    <p>Age = {{ age }}</p>
-
-    <p>Age + A = {{ addToA }}</p>
-    <p>Age + B = {{ addToB }}</p>
+    <button v-on:click="error = !error">Toggle Error</button>
+    <button v-on:click="success = !success">Toggle Success</button>
+   <!--  <p v-if="error">There has been an error</p>
+    <p v-else-if="success">Success</p> -->
+    <p v-show="error">There has been an error</p>
+    <p v-show="success">Success</p>
   </div>
 
   <script src="js/app.js"></script>
