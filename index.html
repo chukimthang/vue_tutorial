@@ -8,27 +8,17 @@
   <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
 </head>
 <body>
-  <div id="vue-app">
-    <h1>Looping with v-for</h1>
-    
-    <ul>
-      <li v-for="character in characters">{{ character }}</li>
-    </ul>
+  <h1>Multiple Vue Instances</h1>
 
-    <ul>
-      <li v-for="(ninja, index) in ninjas">{{ index }} - {{ ninja.name }} - {{ ninja.age }}</li>
-    </ul>
+  <div id="vue-app-one">
+    <h2>{{ title }}</h2>
+    <p>{{ greet }}</p>
+  </div>
 
-    <template v-for="(ninja, index) in ninjas">
-      <h3>{{ index }} . {{ ninja.name }}</h3>
-      <p>{{ ninja.age }}</p>
-    </template>
-
-    <template v-for="(ninja, index) in ninjas">
-      <div v-for="(val, key) in ninja">
-        <p>{{ key }} - {{ val }}</p>
-      </div>
-    </template>
+  <div id="vue-app-two">
+    <h2>{{ title }}</h2>
+    <p>{{ greet }}</p>
+    <button v-on:click="changeTitle">Change App One Title</button>
   </div>
 
   <script src="js/app.js"></script>

@@ -1,12 +1,7 @@
-new Vue({
-  el: "#vue-app",
+var one = new Vue({
+  el: "#vue-app-one",
   data: {
-    characters: ["Mario", "Luigi", "Yoshi", "Bowser"],
-    ninjas: [
-      {name: "Thang", age: 24},
-      {name: "Loi", age: 22},
-      {name: "Phu", age: 21}
-    ]
+    title: "Vue App One"
   },
 
   methods: {
@@ -14,5 +9,29 @@ new Vue({
   },
 
   computed: {
+    greet: function() {
+      return "Hello from app one";
+    }
   }
 });
+
+var two = new Vue({
+  el: "#vue-app-two",
+  data: {
+    title: "Vue App Two"
+  },
+
+  methods: {
+    changeTitle: function() {
+      one.title = "Title changed";
+    }
+  },
+
+  computed: {
+    greet: function() {
+      return "This is app 2 speacking to ja";
+    }
+  }
+});
+
+//two.title = "Changed from outside";
