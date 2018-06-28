@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     changeTitle: function() {
-      this.title = "Chu Kim Thang Vue"
+      this.$emit("changeTitle", "Chu Kim Thang Vue");
     }
   }
 }
