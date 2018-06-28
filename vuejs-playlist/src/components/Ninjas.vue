@@ -1,5 +1,6 @@
 <template>
   <div id="ninjas">
+    <p>{{ ninjas }}</p>
     <ul>
       <li v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
         <h2>{{ ninja.name }}</h2>
@@ -11,15 +12,14 @@
 
 <script>
 export default {
-  data () {
-    return {
-      ninjas: [
-        {name: "Chu Kim Thang", age: 24, show: false},
-        {name: "Chu Kim Loi", age: 22, show: false},
-        {name: "Luu Duc Phu", age: 22, show: false},
-        {name: "Nguyen Doan Quyet Thang", age: 24, show: false},
-        {name: "Le Van Bien", age: 23, show: false}
-      ]
+  props: {
+    ninjas: {
+      type: Array,
+      required: true
+    }
+  },
+  data(){
+    return{
     }
   }
 }

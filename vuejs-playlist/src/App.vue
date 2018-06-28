@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header></app-header>
-    <app-ninjas></app-ninjas>
+    <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
     <app-footer></app-footer>
   </div>
 </template>
@@ -19,7 +19,13 @@ export default {
   },
   data () {
     return {
-      
+      ninjas: [
+        {name: "Chu Kim Thang", age: 24, show: false},
+        {name: "Chu Kim Loi", age: 22, show: false},
+        {name: "Luu Duc Phu", age: 22, show: false},
+        {name: "Nguyen Doan Quyet Thang", age: 24, show: false},
+        {name: "Le Van Bien", age: 23, show: false}
+      ]
     }
   }
 }
