@@ -1,8 +1,10 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
-    <app-footer></app-footer>
+    </br>
+    <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -25,7 +27,8 @@ export default {
         {name: "Luu Duc Phu", age: 22, show: false},
         {name: "Nguyen Doan Quyet Thang", age: 24, show: false},
         {name: "Le Van Bien", age: 23, show: false}
-      ]
+      ],
+      title: "Vue ThangCK"
     }
   }
 }
