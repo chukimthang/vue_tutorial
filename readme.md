@@ -9,3 +9,6 @@
 - Install: npm install vue-resource --save
 - Doc: https://github.com/pagekit/vue-resource
 - https://jsonplaceholder.typicode.com/
+
+3. vue-router --save
+- install: npm install vue-router
