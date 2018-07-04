@@ -1,7 +1,7 @@
 <template>
   <div id="show-blogs">
     <h1>All Blog Article</h1>
-    <input type="text" v-model="search" placeholder="Search Blog" class="col-md-12">
+    <input type="text" v-model="search" placeholder="Search Blog">
     <div v-for="blog in filteredBlogs" class="single-blog">
       <h2>{{ blog.title | to-uppercase }}</h2>
       <article>{{ blog.body }}</article>
