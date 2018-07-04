@@ -8,3 +8,4 @@
 2. vue-resource
 - Install: npm install vue-resource --save
 - Doc: https://github.com/pagekit/vue-resource
+- https://jsonplaceholder.typicode.com/
