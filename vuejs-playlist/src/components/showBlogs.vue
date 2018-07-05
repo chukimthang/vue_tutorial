@@ -3,7 +3,7 @@
     <h1>All Blog Article</h1>
     <input type="text" v-model="search" placeholder="Search Blog">
     <div v-for="blog in filteredBlogs" class="single-blog">
-      <h2>{{ blog.title | to-uppercase }}</h2>
+      <router-link v-bind:to="'/blog/' + blog.id"><h2>{{ blog.title | to-uppercase }}</h2></router-link>
       <article>{{ blog.body }}</article>
     </div>
   </div>
